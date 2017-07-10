@@ -1,0 +1,6 @@
+framework module Pods_SBQQ {
+  umbrella header "Pods-SBQQ-umbrella.h"
+
+  export *
+  module * { export * }
+}
