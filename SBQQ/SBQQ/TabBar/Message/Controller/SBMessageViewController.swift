@@ -163,7 +163,7 @@ extension SBMessageViewController: UIPopoverPresentationControllerDelegate {
                 "notDisturb": true
             ],
             [
-                "icon": "https://qlogo1.store.qq.com/qzone/501958621/501958621/100",
+                "icon": "https://qlogo1.store.qq.com/qzone/291491692/291491692/100",
                 "title": "服务号",
                 "lastMessage": "QQ天气：【朝阳】阵雨 18／24，08:05更新～",
                 "time": time1,
@@ -171,7 +171,7 @@ extension SBMessageViewController: UIPopoverPresentationControllerDelegate {
                 "notDisturb": true
             ],
             [
-                "icon": "https://qlogo1.store.qq.com/qzone/836511761/836511761/100",
+                "icon": "https://qlogo1.store.qq.com/qzone/291491692/291491692/100",
                 "title": "QQ邮箱提醒",
                 "lastMessage": "蒲公英团队：蒲公英应用过期通知",
                 "time": time2,
@@ -179,7 +179,7 @@ extension SBMessageViewController: UIPopoverPresentationControllerDelegate {
                 "notDisturb": true
             ],
             [
-                "icon": "https://qlogo1.store.qq.com/qzone/501958621/501958621/100",
+                "icon": "https://qlogo1.store.qq.com/qzone/291491692/291491692/100",
                 "title": "光头薛",
                 "lastMessage": "我还没有注意这个",
                 "time": time3,
@@ -187,7 +187,7 @@ extension SBMessageViewController: UIPopoverPresentationControllerDelegate {
                 "notDisturb": false
             ],
             [
-                "icon": "https://qlogo1.store.qq.com/qzone/1802130587/1802130587/100",
+                "icon": "https://qlogo1.store.qq.com/qzone/291491692/291491692/100",
                 "title": "上车了",
                 "lastMessage": "QQ小冰：@往事随风而去 我才不要学坏呢！...",
                 "time": time4,
