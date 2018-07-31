@@ -38,7 +38,8 @@ class SBAccountListView: UIView {
         table.tableFooterView = UIView()
         addSubview(table)
         table.snp.makeConstraints { (make) in
-            make.edges.equalToSuperview()
+            make.bottom.left.right.equalToSuperview()
+            make.top.equalTo(10)
         }
         table.rowHeight = 40
         table.delegate = self
@@ -46,6 +47,8 @@ class SBAccountListView: UIView {
         table.separatorInset = .zero
         table.register(SBAccountListViewCell.self, forCellReuseIdentifier: "cell")
         table.isScrollEnabled = dataSource.count > SBAccountListView.maxAccountCount
+        table.clipsToBounds = true
+        table.layer.cornerRadius = 5
     }
 }
 
