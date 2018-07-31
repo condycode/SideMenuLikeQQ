@@ -55,10 +55,15 @@ class SBTabMainBaseViewController: SBViewController, UISearchBarDelegate {
     
     // MARK: -  初始化导航栏
     func setLeftBarItem() {
-        let avatarImg = UIImageView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
+        
+        let contentView = UIView()
+        contentView.frame = CGRect(x: 0, y: 0, width: 40, height: 40)
+        
+        let avatarImg = UIImageView(frame: contentView.bounds)
         avatarImg.clipsToBounds = true
         avatarImg.layer.cornerRadius = 20
         avatarImg.isUserInteractionEnabled = true
+        avatarImg.contentMode = .scaleAspectFit
         avatarImg.kf.setImage(with: URL(string: "https://qlogo1.store.qq.com/qzone/291491692/291491692/100"), placeholder: UIImage(named: "login_avatar_default"), options: nil, progressBlock: nil, completionHandler: nil)
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(leftBarItemTap(_:)))
@@ -66,8 +71,9 @@ class SBTabMainBaseViewController: SBViewController, UISearchBarDelegate {
         
         let longPress = UILongPressGestureRecognizer(target: self, action: #selector(leftBarItemLongPress(_:)))
         avatarImg.addGestureRecognizer(longPress)
+        contentView.addSubview(avatarImg)
         
-        let leftBarItem = UIBarButtonItem(customView: avatarImg)
+        let leftBarItem = UIBarButtonItem(customView: contentView)
         navigationItem.leftBarButtonItem = leftBarItem
     }
     
