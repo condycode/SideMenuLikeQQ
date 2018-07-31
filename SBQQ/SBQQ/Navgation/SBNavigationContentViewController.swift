@@ -125,7 +125,7 @@ class SBNavigationContentViewController: UIViewController {
     }
     
     // MARK: - 点击灰色涂层，关闭菜单手势
-    func hideMenuTap(_ tap: UITapGestureRecognizer) {
+    @objc func hideMenuTap(_ tap: UITapGestureRecognizer) {
         hideMenu(true)
     }
     
@@ -188,7 +188,7 @@ extension SBNavigationContentViewController: UIGestureRecognizerDelegate {
     }
     
     // MARK: -  拖动手势
-    func edgePanGesture(_ edgePan: UIPanGestureRecognizer) {
+    @objc func edgePanGesture(_ edgePan: UIPanGestureRecognizer) {
 //        guard let rootView = rootNav.view else {
 //            return
 //        }
@@ -244,12 +244,12 @@ extension SBNavigationContentViewController: UIGestureRecognizerDelegate {
 // MARK: - 外部调用隐藏、显示菜单接口
 extension SBNavigationContentViewController {
     
-    func getShowMenu(notification: Notification) {
+    @objc func getShowMenu(notification: Notification) {
         let animated = notification.userInfo?.readBool(SBNavigationContentViewController.SBSideMenuNotificationAnimatedKey)
         showMenu(animated!)
     }
     
-    func getHideMenu(notification: Notification) {
+    @objc func getHideMenu(notification: Notification) {
         let animated = notification.userInfo?.readBool(SBNavigationContentViewController.SBSideMenuNotificationAnimatedKey)
         hideMenu(animated!)
     }

@@ -40,7 +40,7 @@ class SBMessageViewController: SBTabMainBaseViewController {
     
     
     /// 点击导航加号按钮
-    func rightBarItemClick() {
+    @objc func rightBarItemClick() {
         
         let pop = Popover(options: [PopoverOption.animationIn(0.35),
                                     PopoverOption.animationOut(0.2),

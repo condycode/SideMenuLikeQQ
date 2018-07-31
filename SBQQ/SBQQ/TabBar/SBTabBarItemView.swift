@@ -168,7 +168,7 @@ class SBTabBarItemView: UIView {
     }
     
     // 拖动动画，具体的拖动，到子类中实现
-    func panGesture(_ pan: UIPanGestureRecognizer) {
+    @objc func panGesture(_ pan: UIPanGestureRecognizer) {
         
     }
     

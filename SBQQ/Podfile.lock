@@ -1,24 +1,32 @@
 PODS:
-  - Alamofire (4.3.0)
-  - Kingfisher (3.10.2)
-  - Popover (1.0.6)
-  - SnapKit (3.2.0)
-  - SVProgressHUD (2.0.4)
+  - Alamofire (4.7.3)
+  - Kingfisher (4.8.1)
+  - Popover (1.2.0)
+  - SnapKit (4.0.0)
+  - SVProgressHUD (2.2.5)
 
 DEPENDENCIES:
-  - Alamofire (~> 4.3.0)
+  - Alamofire
   - Kingfisher
   - Popover
   - SnapKit
-  - SVProgressHUD (~> 2.0.3)
+  - SVProgressHUD
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - Kingfisher
+    - Popover
+    - SnapKit
+    - SVProgressHUD
 
 SPEC CHECKSUMS:
-  Alamofire: 856a113053a7bc9cbe5d6367a555d773fc5cfef7
-  Kingfisher: 7297492bf8cec9b2e2dee3519f2219948580d98e
-  Popover: 227aa929a6cdf41c4828786be8ede109c40344c9
-  SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
-  SVProgressHUD: bfde85ed6c573ea802b9cb37894ed9b629034f1b
+  Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
+  Kingfisher: 868c1149679a7ab6869be118faa9b5aed154aaf0
+  Popover: 28c1ac8e937ab2b3965bd2da7dd18324357abc41
+  SnapKit: a42d492c16e80209130a3379f73596c3454b7694
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: 6c4a5d43aab9db1ed4a6672ba97b5832e7fdf5a9
+PODFILE CHECKSUM: 744b8e95e6b41c9f5ed00c8075ddebd9995c46c4
 
-COCOAPODS: 1.2.1
+COCOAPODS: 1.5.3

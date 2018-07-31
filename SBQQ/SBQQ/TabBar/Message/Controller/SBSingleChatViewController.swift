@@ -33,7 +33,7 @@ class SBSingleChatViewController: SBViewController, UIGestureRecognizerDelegate 
         navigationController?.navigationBar.setBackgroundImage(nil, for: UIBarMetrics.default)
         navigationController?.navigationBar.tintColor = UIColor.gray
         navigationController?.navigationBar.barTintColor = UIColor.white.withAlphaComponent(0.7)
-        navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.gray]
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.gray]
     }
     
     
@@ -43,11 +43,11 @@ class SBSingleChatViewController: SBViewController, UIGestureRecognizerDelegate 
         self.navigationController?.interactivePopGestureRecognizer?.delegate = self
     }
     
-    func back() {
+    @objc func back() {
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(named: "header_bg_message")?.stretchableImage(withLeftCapWidth: 20, topCapHeight: 20), for: UIBarMetrics.default)
         self.navigationController?.navigationBar.tintColor = UIColor.white
         self.navigationController?.navigationBar.barTintColor = UIColor.white
-        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
         self.navigationController?.setNavigationBarHidden(false, animated: false)
         
         navigationController?.popViewController(animated: true)

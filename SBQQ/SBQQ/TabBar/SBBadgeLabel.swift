@@ -93,7 +93,7 @@ class SBBadgeLabel: UILabel {
     
     
     // MARK: - 拖动清空数字的部分
-    func panGestureMove(_ pan: UIPanGestureRecognizer) {
+    @objc func panGestureMove(_ pan: UIPanGestureRecognizer) {
         
         //如果设置了不可以拖动属性
         if (!draggable) {

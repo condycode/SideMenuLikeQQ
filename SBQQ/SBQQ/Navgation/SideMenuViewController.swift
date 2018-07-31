@@ -133,7 +133,7 @@ class SideMenuViewController: UIViewController {
     
     
     
-    func bottomBtnClick(_ sender: UIButton) {
+    @objc func bottomBtnClick(_ sender: UIButton) {
         
     }
 

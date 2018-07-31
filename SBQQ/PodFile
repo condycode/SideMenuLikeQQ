@@ -4,7 +4,7 @@ target 'SBQQ' do
 pod 'SnapKit'
 pod 'Popover'
 pod 'Kingfisher'
-pod 'Alamofire', '~> 4.3.0'
-pod 'SVProgressHUD', '~> 2.0.3'
+pod 'Alamofire'
+pod 'SVProgressHUD'
 
 end

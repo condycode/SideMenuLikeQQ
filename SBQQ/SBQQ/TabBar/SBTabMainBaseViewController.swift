@@ -28,7 +28,7 @@ class SBTabMainBaseViewController: SBViewController, UISearchBarDelegate {
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(named: "header_bg_message")/*?.stretchableImage(withLeftCapWidth: 20, topCapHeight: 20)*/, for: UIBarMetrics.default)
         self.navigationController?.navigationBar.tintColor = UIColor.white
         self.navigationController?.navigationBar.barTintColor = UIColor.white
-        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
         self.navigationController?.setNavigationBarHidden(false, animated: false)
     }
 
@@ -81,7 +81,7 @@ class SBTabMainBaseViewController: SBViewController, UISearchBarDelegate {
     /// 点击导航上的头像
     ///
     /// - Parameter tap: tap手势
-    func leftBarItemTap(_ tap: UITapGestureRecognizer) {
+    @objc func leftBarItemTap(_ tap: UITapGestureRecognizer) {
         SBNavigationContentViewController.showMenu(true)
     }
     
@@ -89,7 +89,7 @@ class SBTabMainBaseViewController: SBViewController, UISearchBarDelegate {
     /// 长按导航上的头像
     ///
     /// - Parameter press: longPress手势
-    func leftBarItemLongPress(_ press: UILongPressGestureRecognizer) {
+    @objc func leftBarItemLongPress(_ press: UILongPressGestureRecognizer) {
         if let avatar = press.view {
             
             if press.state == .began {

@@ -79,7 +79,7 @@ class SBTabBarView: UIView {
 
     }
     
-    func didTapView(_ tap: UITapGestureRecognizer) {
+    @objc func didTapView(_ tap: UITapGestureRecognizer) {
         
         guard let tapView = tap.view as? SBTabBarItemView else {
             return
