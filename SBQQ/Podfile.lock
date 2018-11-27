@@ -1,8 +1,8 @@
 PODS:
-  - Alamofire (4.7.3)
-  - Kingfisher (4.8.1)
-  - Popover (1.2.0)
-  - SnapKit (4.0.0)
+  - Alamofire (4.8.0)
+  - Kingfisher (4.10.1)
+  - Popover (1.2.1)
+  - SnapKit (4.2.0)
   - SVProgressHUD (2.2.5)
 
 DEPENDENCIES:
@@ -21,10 +21,10 @@ SPEC REPOS:
     - SVProgressHUD
 
 SPEC CHECKSUMS:
-  Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
-  Kingfisher: 868c1149679a7ab6869be118faa9b5aed154aaf0
-  Popover: 28c1ac8e937ab2b3965bd2da7dd18324357abc41
-  SnapKit: a42d492c16e80209130a3379f73596c3454b7694
+  Alamofire: 3ec537f71edc9804815215393ae2b1a8ea33a844
+  Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
+  Popover: b6ca468d2abb9c866ed1772cd842154a034e37c3
+  SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
 PODFILE CHECKSUM: 744b8e95e6b41c9f5ed00c8075ddebd9995c46c4

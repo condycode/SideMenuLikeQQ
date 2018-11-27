@@ -34,7 +34,7 @@ class SBAccountListView: UIView {
     
     // MARK: - 初始化列表
     func setTable() {
-        table = UITableView(frame: CGRect.zero, style: UITableViewStyle.plain)
+        table = UITableView(frame: CGRect.zero, style: UITableView.Style.plain)
         table.tableFooterView = UIView()
         addSubview(table)
         table.snp.makeConstraints { (make) in

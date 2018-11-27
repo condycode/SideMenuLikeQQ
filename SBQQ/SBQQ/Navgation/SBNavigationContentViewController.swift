@@ -63,7 +63,7 @@ class SBNavigationContentViewController: UIViewController {
         //rootNav.view.backgroundColor = UIColor.white
         //rootNav.setNavigationBarHidden(true, animated: false)
         
-        self.addChildViewController(menuViewController)
+        self.addChild(menuViewController)
         self.view.addSubview(menuViewController.view)
         
         menuViewController.view.frame = CGRect(x: (SBNavigationContentViewController.space - screenWidth)/2.0, y: 0, width: screenWidth, height: screenHeight)
@@ -73,7 +73,7 @@ class SBNavigationContentViewController: UIViewController {
         //self.view.addSubview(rootNav.view)
         //rootNav.view.frame = view.bounds
         //rootNav.view.addObserver(self, forKeyPath: "frame", options: .new, context: nil)
-        self.addChildViewController(rootViewController)
+        self.addChild(rootViewController)
         self.view.addSubview(rootViewController.view)
         rootViewController.view.frame = view.bounds
         rootViewController.view.addObserver(self, forKeyPath: "frame", options: .new, context: nil)

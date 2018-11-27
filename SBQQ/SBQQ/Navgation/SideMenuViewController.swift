@@ -113,7 +113,7 @@ class SideMenuViewController: UIViewController {
     }
     
     func setTable() {
-        table = UITableView(frame: CGRect.zero, style: UITableViewStyle.plain)
+        table = UITableView(frame: CGRect.zero, style: UITableView.Style.plain)
         table.tableFooterView = UIView()
         view.addSubview(table)
         table.snp.makeConstraints { (make) in

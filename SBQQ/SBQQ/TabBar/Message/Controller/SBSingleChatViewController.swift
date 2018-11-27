@@ -33,7 +33,7 @@ class SBSingleChatViewController: SBViewController, UIGestureRecognizerDelegate 
         navigationController?.navigationBar.setBackgroundImage(nil, for: UIBarMetrics.default)
         navigationController?.navigationBar.tintColor = UIColor.gray
         navigationController?.navigationBar.barTintColor = UIColor.white.withAlphaComponent(0.7)
-        navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.gray]
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.gray]
     }
     
     
@@ -47,7 +47,7 @@ class SBSingleChatViewController: SBViewController, UIGestureRecognizerDelegate 
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(named: "header_bg_message")?.stretchableImage(withLeftCapWidth: 20, topCapHeight: 20), for: UIBarMetrics.default)
         self.navigationController?.navigationBar.tintColor = UIColor.white
         self.navigationController?.navigationBar.barTintColor = UIColor.white
-        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         self.navigationController?.setNavigationBarHidden(false, animated: false)
         
         navigationController?.popViewController(animated: true)
@@ -56,7 +56,7 @@ class SBSingleChatViewController: SBViewController, UIGestureRecognizerDelegate 
     
     // MARK: - 初始化列表
     func setTable() {
-        table = UITableView(frame: CGRect.zero, style: UITableViewStyle.plain)
+        table = UITableView(frame: CGRect.zero, style: UITableView.Style.plain)
         table.tableFooterView = UIView()
         view.addSubview(table)
         table.snp.makeConstraints { (make) in
@@ -65,7 +65,7 @@ class SBSingleChatViewController: SBViewController, UIGestureRecognizerDelegate 
         table.delegate = self
         table.dataSource = self
         table.rowHeight = 65
-        table.separatorInset = UIEdgeInsetsMake(0, 74, 0, 0)
+        table.separatorInset = UIEdgeInsets.init(top: 0, left: 74, bottom: 0, right: 0)
         table.register(UITableViewCell.self, forCellReuseIdentifier: "UITableViewCell")
         
     }

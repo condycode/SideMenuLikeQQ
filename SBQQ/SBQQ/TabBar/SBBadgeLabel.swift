@@ -111,7 +111,7 @@ class SBBadgeLabel: UILabel {
             
             switch pan.state {
                 
-            case UIGestureRecognizerState.cancelled, .failed, .ended:
+            case UIGestureRecognizer.State.cancelled, .failed, .ended:
                 
                 if (self.beyond == true) {
                     
@@ -207,7 +207,7 @@ class SBBadgeLabel: UILabel {
         animation.duration = 0
         animation.toValue = NSNumber(value: Float(reviseDistance - centerDistance) / Float(reviseDistance))
         animation.isRemovedOnCompletion = false
-        animation.fillMode = kCAFillModeForwards
+        animation.fillMode = CAMediaTimingFillMode.forwards
         self.stayPutView.layer.add(animation, forKey: nil)
         
         

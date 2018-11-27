@@ -8,16 +8,31 @@
 
 import Foundation
 
+extension Dictionary where Dictionary.Key == String {
+    func read<T>(_ key: String, defaultValue: T) -> T {
+        if keys.contains(key) {
+            if let value = self[key] as? T {
+                return value
+            }
+        }
+        return defaultValue
+    }
+}
+
 extension Dictionary {
     
     func readBool(_ key: String, defaultValue: Bool! = false) -> Bool! {
         if let dic = self as? Dictionary<String, Any> {
             if dic.keys.contains(key) {
                 
-                if dic[key] is Int {
-                    return (dic[key] as! Int != 0)
-                } else if dic[key] is NSNumber {
-                    return (dic[key] as! NSNumber).boolValue
+                if let value = dic[key] as? Bool {
+                    return value
+                } else if let value = dic[key] as? Int {
+                    return (value != 0)
+                } else if let value = dic[key] as? NSNumber {
+                    return value.boolValue
+                } else if let value = dic[key] as? String, let v = Int(value) {
+                    return v != 0
                 }
                 
                 return defaultValue
@@ -34,10 +49,10 @@ extension Dictionary {
         if let dic = self as? Dictionary<String, Any> {
             if dic.keys.contains(key) {
                 
-                if dic[key] is Int {
-                    return dic[key] as! Int
-                } else if dic[key] is NSNumber {
-                    return (dic[key] as! NSNumber).intValue
+                if let value = dic[key] as? Int {
+                    return value
+                } else if let value = dic[key] as? NSNumber {
+                    return value.intValue
                 }
                 
                 return defaultValue
@@ -53,10 +68,10 @@ extension Dictionary {
         if let dic = self as? Dictionary<String, Any> {
             if dic.keys.contains(key) {
                 
-                if dic[key] is Int64 {
-                    return dic[key] as! Int64
-                } else if dic[key] is NSNumber {
-                    return (dic[key] as! NSNumber).int64Value
+                if let value = dic[key] as? Int64 {
+                    return value
+                } else if let value = dic[key] as? NSNumber {
+                    return value.int64Value
                 }
                 
                 return defaultValue
@@ -72,10 +87,10 @@ extension Dictionary {
         if let dic = self as? Dictionary<String, Any> {
             if dic.keys.contains(key) {
                 
-                if dic[key] is Float {
-                    return dic[key] as! Float
-                } else if dic[key] is NSNumber {
-                    return (dic[key] as! NSNumber).floatValue
+                if let value = dic[key] as? Float {
+                    return value
+                } else if let value = dic[key] as? NSNumber {
+                    return value.floatValue
                 }
                 
                 return defaultValue
@@ -91,10 +106,10 @@ extension Dictionary {
         if let dic = self as? Dictionary<String, Any> {
             if dic.keys.contains(key) {
                 
-                if dic[key] is Double {
-                    return dic[key] as! Double
-                } else if dic[key] is NSNumber {
-                    return (dic[key] as! NSNumber).doubleValue
+                if let value = dic[key] as? Double {
+                    return value
+                } else if let value = dic[key] as? NSNumber {
+                    return value.doubleValue
                 }
                 
                 return defaultValue
@@ -112,10 +127,10 @@ extension Dictionary {
         if let dic = self as? Dictionary<String, Any> {
             if dic.keys.contains(key) {
                 
-                if dic[key] is String {
-                    return dic[key] as! String
-                } else if dic[key] is NSString {
-                    return dic[key] as! String
+                if let value = dic[key] as? String {
+                    return value
+                } else if let value = dic[key] as? NSString {
+                    return value as String
                 }
                 
                 return defaultValue
@@ -131,10 +146,10 @@ extension Dictionary {
         if let dic = self as? Dictionary<String, Any> {
             if dic.keys.contains(key) {
                 
-                if dic[key] is NSArray {
-                    return dic[key] as! Array<Any>
-                } else if dic[key] is Array<Any> {
-                    return dic[key] as! Array<Any>
+                if let value = dic[key] as? NSArray, let v = value as? Array<Any> {
+                    return v
+                } else if let value = dic[key] as? Array<Any> {
+                    return value
                 }
                 
                 return defaultValue
@@ -150,10 +165,10 @@ extension Dictionary {
         if let dic = self as? Dictionary<String, Any> {
             if dic.keys.contains(key) {
                 
-                if dic[key] is NSDictionary {
-                    return dic[key] as! Dictionary<String, Any>
-                } else if dic[key] is Dictionary<String, Any> {
-                    return dic[key] as! Dictionary<String, Any>
+                if let value = dic[key] as? NSDictionary, let v = value as? Dictionary<String, Any> {
+                    return v
+                } else if let value = dic[key] as? Dictionary<String, Any> {
+                    return value
                 }
                 
                 return defaultValue

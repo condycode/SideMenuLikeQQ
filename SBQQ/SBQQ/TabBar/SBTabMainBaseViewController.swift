@@ -28,13 +28,13 @@ class SBTabMainBaseViewController: SBViewController, UISearchBarDelegate {
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(named: "header_bg_message")/*?.stretchableImage(withLeftCapWidth: 20, topCapHeight: 20)*/, for: UIBarMetrics.default)
         self.navigationController?.navigationBar.tintColor = UIColor.white
         self.navigationController?.navigationBar.barTintColor = UIColor.white
-        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         self.navigationController?.setNavigationBarHidden(false, animated: false)
     }
 
     // MARK: - 初始化列表
     func setTable() {
-        table = UITableView(frame: CGRect.zero, style: UITableViewStyle.plain)
+        table = UITableView(frame: CGRect.zero, style: UITableView.Style.plain)
         table.tableFooterView = UIView()
         view.addSubview(table)
         table.snp.makeConstraints { (make) in

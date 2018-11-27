@@ -85,9 +85,9 @@ class SBTabBarController: UITabBarController {
         dynamicViewController = SBDynamicViewController()
         let dynamicNav = SBMainNavigationController(rootViewController: dynamicViewController)
         
-        addChildViewController(messageNav)
-        addChildViewController(contactsNav)
-        addChildViewController(dynamicNav)
+        addChild(messageNav)
+        addChild(contactsNav)
+        addChild(dynamicNav)
         
         let tabBarView = SBTabBarView()
         tabBarView.delegate = self

@@ -38,7 +38,7 @@ class SBMainNavigationController: UINavigationController {
         self.navigationBar.setBackgroundImage(UIImage(named: "header_bg_message"), for: UIBarMetrics.default)
         self.navigationBar.tintColor = UIColor.white
         self.navigationBar.barTintColor = UIColor.white
-        self.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
+        self.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         self.setNavigationBarHidden(false, animated: false)
     }
     
